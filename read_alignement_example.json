@@ -1,0 +1,77 @@
+{
+  "analysisType": { "name": "clinReadAlignment", "version": 1 },
+  "studyId": "EXOQC",
+
+  "samples": [
+    {
+      "info": { "clinicalSystemSampleId": "SA19292" },
+      "submitterSampleId": "ss_id6",
+      "sampleType": "Total DNA",
+      "matchedNormalSubmitterSampleId": null,
+      "specimen": {
+        "info": { "clinicalSystemSpecimenId": "SP19292" },
+        "submitterSpecimenId": "ssp_id8",
+        "specimenType": "Normal",
+        "specimenTissueSource": "Blood derived",
+        "tumourNormalDesignation": "Normal"
+      },
+      "donor": {
+        "info": { "clinicalSystemDonorId": "PA19292" },
+        "submitterDonorId": "sd_id10",
+        "studyId": "EXOQC",
+        "gender": "Female"
+      }
+    }
+  ],
+  "files": [
+    {
+      "fileName": "example.cram",
+      "studyId": "EXOQC",
+      "fileSize": 1234561,
+      "fileType": "CRAM",
+      "fileMd5sum": "73a90acaae2b1ccc0e969709665bc62f",
+      "fileAccess": "controlled",
+      "dataType": "ReadAlignment"
+    },
+    {
+      "fileName": "example.cram.crai",
+      "studyId": "EXOQC",
+      "fileSize": 1234562,
+      "fileType": "CRAI",
+      "fileMd5sum": "67a97437c474cc1d95e0a1672b291b70",
+      "fileAccess": "controlled",
+      "dataType": "ReadAlignmentIndex"
+    },
+    {
+      "studyId": "ExoQC",
+      "fileName": "aFileName.tsv",
+      "fileSize": 4229,
+      "dataType": "coverageReport",
+      "fileType": "tsv",
+      "fileMd5sum": "633613758efefecfc51105ddcd8862f8",
+      "fileAccess": "controlled"
+    }
+  ],
+
+  "experiment": {
+    "libraryStrategy": "WXS",
+    "libraryName": "a library name",
+    "libraryType": "a libray type",
+    "aligned": true,
+    "alignmentTool": "Dragen",
+    "pipelineVersion": "1.0",
+    "referenceGenome": "GRCh38 / hg38",
+    "pairedEnd": true,
+    "insertSize": 100,
+    "SequencingInstrument": "Illumina HiSeq",
+    "runId": "393777373",
+    "runDate": "05-14-2020",
+    "labAliquotId": "Nanuq_38383",
+
+    "totalReadsCount": 38838889393,
+    "readSupplementary": 282771,
+    "readDuplicates": 1881771,
+    "readMapped": 3093943094,
+    "readProperlyPaired": 39898989
+  }
+}
