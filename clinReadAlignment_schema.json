@@ -1,0 +1,101 @@
+{
+  "name": "clinReadAlignment",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "experiment": {
+        "type": "object",
+        "required": [
+          "libraryStrategy",
+          "libraryName",
+          "libraryType",
+          "aligned",
+          "alignmentTool",
+          "pipelineVersion",
+          "referenceGenome",
+          "pairedEnd",
+          "insertSize",
+          "SequencingInstrument",
+          "runId",
+          "runDate",
+          "labAliquotId"
+        ],
+        "properties": {
+          "libraryStrategy": {
+            "enum": [
+              "WGS",
+              "WXS",
+              "RNA-Seq",
+              "ChIP-Seq",
+              "miRNA-Seq",
+              "Bisulfite-Seq",
+              "Validation",
+              "Amplicon",
+              "Other"
+            ],
+            "type": "string"
+          },
+          "libraryName": {
+            "type": ["string", "null"]
+          },
+          "libraryType": {
+            "type": ["string", "null"]
+          },
+          "aligned": {
+            "type": ["boolean", "null"]
+          },
+          "alignmentTool": {
+            "type": ["string", "null"]
+          },
+          "pipelineVersion": {
+            "type": ["string", "null"]
+          },
+          "referenceGenome": {
+            "enum": ["GRCh38 / hg38", "GRCh37 / hg19"],
+            "type": ["string", "null"]
+          },
+          "pairedEnd": {
+            "type": ["boolean", "null"]
+          },
+          "insertSize": {
+            "type": ["integer", "null"]
+          },
+          "SequencingInstrument": {
+            "type": ["string", "null"]
+          },
+          "runId": {
+            "type": ["string", "null"]
+          },
+          "runDate": {
+            "type": ["string", "null"]
+          },
+          "labAliquotId": {
+            "type": ["string", "null"]
+          },
+
+          "totalReadsCount": {
+            "type": ["integer", "null"]
+          },
+          "readSupplementary": {
+            "type": ["integer", "null"]
+          },
+          "readDuplicates": {
+            "type": ["integer", "null"]
+          },
+          "readMapped": {
+            "type": ["integer", "null"]
+          },
+          "readProperlyPaired": {
+            "type": ["integer", "null"]
+          },
+          "Contamination_verifyBamId": {
+            "type": ["number", "null"]
+          },
+          "Duplication_%pcr": {
+            "type": ["number", "null"]
+          }
+        }
+      }
+    }
+  }
+}
