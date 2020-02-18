@@ -36,63 +36,120 @@
             "type": "string"
           },
           "libraryName": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "libraryType": {
-            "type": ["string", "null"]
+            "enum": [
+              "Roche MedExome V3",
+              "SureSelect V5"
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "aligned": {
-            "type": ["boolean", "null"]
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "alignmentTool": {
-            "type": ["string", "null"]
-          },
-          "pipelineVersion": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "referenceGenome": {
-            "enum": ["GRCh38 / hg38", "GRCh37 / hg19"],
-            "type": ["string", "null"]
+            "enum": [
+              "GRCh38 / hg38",
+              "GRCh37 / hg19"
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "pairedEnd": {
-            "type": ["boolean", "null"]
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "insertSize": {
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
-          "SequencingInstrument": {
-            "type": ["string", "null"]
+          "SequencingStrategy": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SequencerId": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "runId": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "runDate": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "labAliquotId": {
-            "type": ["string", "null"]
-          },
-
           "totalReadsCount": {
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "readSupplementary": {
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "readDuplicates": {
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "readMapped": {
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "readProperlyPaired": {
-            "type": ["integer", "null"]
+            "type": [
+              "integer",
+              "null"
+            ]
           },
           "Contamination_verifyBamId": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           },
           "Duplication_%pcr": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           }
         }
       }
