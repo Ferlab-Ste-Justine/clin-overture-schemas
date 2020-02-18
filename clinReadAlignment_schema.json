@@ -11,14 +11,13 @@
           "libraryType",
           "aligned",
           "alignmentTool",
-          "pipelineVersion",
           "referenceGenome",
           "pairedEnd",
           "insertSize",
-          "SequencingInstrument",
+          "sequencingStrategy",
+          "sequencingId",
           "runId",
-          "runDate",
-          "labAliquotId"
+          "runDate"
         ],
         "properties": {
           "libraryStrategy": {
@@ -85,13 +84,13 @@
               "null"
             ]
           },
-          "SequencingStrategy": {
+          "sequencingStrategy": {
             "type": [
               "string",
               "null"
             ]
           },
-          "SequencerId": {
+          "sequencerId": {
             "type": [
               "string",
               "null"
