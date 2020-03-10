@@ -18,6 +18,7 @@
           "sequencingId",
           "runId",
           "runDate"
+          "LIMSAliquotId"
         ],
         "properties": {
           "libraryStrategy": {
@@ -91,6 +92,12 @@
             ]
           },
           "sequencerId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "LIMSAliquotId": {
             "type": [
               "string",
               "null"
