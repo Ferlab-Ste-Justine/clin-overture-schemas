@@ -13,7 +13,6 @@
               "workflow_name",
               "workflow_version",
               "genome_build",
-              "run_id",
               "inputs"
             ]
           },
@@ -21,7 +20,6 @@
             "workflow_name",
             "workflow_version",
             "genome_build",
-            "run_id",
             "inputs"
           ],
           "type": "object",
@@ -38,9 +36,6 @@
                   "GRCh38 / hg38",
                   "GRCh37 / hg19"
                 ]
-            },
-            "run_id": {
-              "type": "string"
             },
             "inputs": {
               "type": "array",
@@ -60,45 +55,13 @@
           "type": "object",
           "propertyNames": {
             "enum": [
-              "platform_lab",
-              "platform_tool",
               "experimental_strategy"
             ]
           },
           "required": [
-            "platform_lab",
-            "platform_tool",
             "experimental_strategy"
           ],
           "properties": {
-            "platform_lab": {
-                "enum":[
-                    "CHUSJ",
-                    "CUSM",
-                    "CHUM",
-                    "HGJ",
-                    "CHUQ",
-                    "HMR",
-                    "CHUS",
-                    "ICM"
-                ],
-                "type":"string"
-            },
-            "platform_tool": {
-                "enum": [
-                  "CAPILLARY",
-                  "LS454",
-                  "ILLUMINA",
-                  "SOLID",
-                  "HELICOS",
-                  "IONTORRENT",
-                  "ONT",
-                  "PACBIO",
-                  "Nanopore",
-                  "BGI"
-                ],
-                "type":"string"
-            },
             "experimental_strategy": {
               "enum": [
                 "WGS",

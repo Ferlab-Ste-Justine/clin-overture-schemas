@@ -54,7 +54,6 @@
         "experiment": {
           "propertyNames": {
             "enum": [
-              "platform_lab",
               "platform_tool",
               "library_name",
               "library_type",
@@ -69,7 +68,6 @@
             ]
           },
           "required": [
-            "platform_lab",
             "platform_tool",
             "library_name",
             "library_type",
@@ -83,20 +81,7 @@
             "LIMSAliquotId"
           ],
           "type": "object",
-          "properties": {
-            "platform_lab": {
-              "enum":[
-                "CHUSJ",
-                "CUSM",
-                "CHUM",
-                "HGJ",
-                "CHUQ",
-                "HMR",
-                "CHUS",
-                "ICM"
-              ],
-              "type": "string"
-            },           
+          "properties": {          
             "platform_tool": {
               "enum": [
                 "CAPILLARY",
