@@ -1,0 +1,120 @@
+{
+    "name": "clin-variant-calling",
+    "schema": {
+      "type": "object",
+      "required": [
+        "workflow",
+        "experiment"
+      ],
+      "properties": {
+        "workflow": {
+          "propertyNames": {
+            "enum": [
+              "workflow_name",
+              "workflow_version",
+              "genome_build",
+              "run_id",
+              "inputs"
+            ]
+          },
+          "required": [
+            "workflow_name",
+            "workflow_version",
+            "genome_build",
+            "run_id",
+            "inputs"
+          ],
+          "type": "object",
+          "properties": {
+            "workflow_name": {
+              "type": "string"
+            },
+            "workflow_version": {
+              "type": "string"
+            },
+            "genome_build": {
+              "type": "string",
+              "enum": [
+                  "GRCh38 / hg38",
+                  "GRCh37 / hg19"
+                ]
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "inputs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "analysis_type": {
+                    "type": "string",
+                    "const": "clin-read-alignment"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "experiment": {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "platform_lab",
+              "platform_tool",
+              "experimental_strategy"
+            ]
+          },
+          "required": [
+            "platform_lab",
+            "platform_tool",
+            "experimental_strategy"
+          ],
+          "properties": {
+            "platform_lab": {
+                "enum":[
+                    "CHUSJ",
+                    "CUSM",
+                    "CHUM",
+                    "HGJ",
+                    "CHUQ",
+                    "HMR",
+                    "CHUS",
+                    "ICM"
+                ],
+                "type":"string"
+            },
+            "platform_tool": {
+                "enum": [
+                  "CAPILLARY",
+                  "LS454",
+                  "ILLUMINA",
+                  "SOLID",
+                  "HELICOS",
+                  "IONTORRENT",
+                  "ONT",
+                  "PACBIO",
+                  "Nanopore",
+                  "BGI"
+                ],
+                "type":"string"
+            },
+            "experimental_strategy": {
+              "enum": [
+                "WGS",
+                "WXS",
+                "RNA-Seq",
+                "ChIP-Seq",
+                "miRNA-Seq",
+                "Bisulfite-Seq",
+                "Validation",
+                "Amplicon",
+                "Other"
+              ],
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
