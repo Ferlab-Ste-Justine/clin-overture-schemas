@@ -55,7 +55,6 @@
           "type": "object",
           "propertyNames": {
             "enum": [
-              "platform_lab",
               "platform_tool",
               "experimental_strategy"
             ]

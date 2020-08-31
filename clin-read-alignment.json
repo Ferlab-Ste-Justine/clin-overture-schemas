@@ -14,7 +14,7 @@
               "workflow_version",
               "genome_build",
               "aligned",
-              "alignmentTool"
+              "alignment_tool"
             ]
           },
           "required": [
@@ -22,7 +22,7 @@
             "workflow_version",
             "genome_build",
             "aligned",
-            "alignmentTool"
+            "alignment_tool"
           ],
           "allOf": [
             {
@@ -44,7 +44,7 @@
                 "aligned":{
                   "type": "boolean"
                 },
-                "alignmentTool":{
+                "alignment_tool":{
                   "type": "string"
                 }
               }
@@ -64,7 +64,7 @@
               "fragment_size",
               "sequencing_date",
               "experimental_strategy",
-              "LIMSAliquotId"
+              "LIMS_aliquot_id"
             ]
           },
           "required": [
@@ -78,7 +78,7 @@
             "fragment_size",
             "sequencing_date",
             "experimental_strategy",
-            "LIMSAliquotId"
+            "LIMS_aliquot_id"
           ],
           "type": "object",
           "properties": {          
@@ -114,7 +114,7 @@
                 "type": "boolean"
             },
             "fragment_size": {
-              "type": "string"
+              "type": "integer"
             },
             "sequencing_date": {
               "oneOf": [
@@ -148,11 +148,14 @@
                 "Bisulfite-Seq",
                 "Validation",
                 "Amplicon",
+                "ATAC-Seq",
+                "scRNA-Seq",
+                "Targeted Sequencing",
                 "Other"
               ],
               "type":"string"
             },
-            "LIMSAliquotId":{
+            "LIMS_aliquot_id":{
               "type":"string"
             }
           }
