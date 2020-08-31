@@ -1,0 +1,83 @@
+{
+    "name": "clin-variant-calling",
+    "schema": {
+      "type": "object",
+      "required": [
+        "workflow",
+        "experiment"
+      ],
+      "properties": {
+        "workflow": {
+          "propertyNames": {
+            "enum": [
+              "workflow_name",
+              "workflow_version",
+              "genome_build",
+              "inputs"
+            ]
+          },
+          "required": [
+            "workflow_name",
+            "workflow_version",
+            "genome_build",
+            "inputs"
+          ],
+          "type": "object",
+          "properties": {
+            "workflow_name": {
+              "type": "string"
+            },
+            "workflow_version": {
+              "type": "string"
+            },
+            "genome_build": {
+              "type": "string",
+              "enum": [
+                  "GRCh38 / hg38",
+                  "GRCh37 / hg19"
+                ]
+            },
+            "inputs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "analysis_type": {
+                    "type": "string",
+                    "const": "clin-variant-calling"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "experiment": {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "experimental_strategy"
+            ]
+          },
+          "required": [
+            "experimental_strategy"
+          ],
+          "properties": {
+            "experimental_strategy": {
+              "enum": [
+                "WGS",
+                "WXS",
+                "RNA-Seq",
+                "ChIP-Seq",
+                "miRNA-Seq",
+                "Bisulfite-Seq",
+                "Validation",
+                "Amplicon",
+                "Other"
+              ],
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }

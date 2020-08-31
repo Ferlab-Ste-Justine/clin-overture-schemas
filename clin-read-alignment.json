@@ -1,0 +1,165 @@
+{
+    "name": "clin-read-alignment",
+    "schema": {
+      "type": "object",
+      "required": [
+        "workflow",
+        "experiment"
+      ],
+      "properties": {
+        "workflow": {
+          "propertyNames": {
+            "enum": [
+              "workflow_name",
+              "workflow_version",
+              "genome_build",
+              "aligned",
+              "alignment_tool"
+            ]
+          },
+          "required": [
+            "workflow_name",
+            "workflow_version",
+            "genome_build",
+            "aligned",
+            "alignment_tool"
+          ],
+          "allOf": [
+            {
+              "type": "object",
+              "properties": {
+                "workflow_name": {
+                  "type": "string"
+                },
+                "workflow_version": {
+                  "type": "string"
+                },
+                "genome_build": {
+                  "enum": [
+                    "GRCh38 / hg38",
+                    "GRCh37 / hg19"
+                  ],
+                  "type": "string"
+                },
+                "aligned":{
+                  "type": "boolean"
+                },
+                "alignment_tool":{
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "experiment": {
+          "propertyNames": {
+            "enum": [
+              "platform_tool",
+              "library_name",
+              "library_type",
+              "run_id",
+              "run_name",
+              "run_alias",
+              "is_paired_end",
+              "fragment_size",
+              "sequencing_date",
+              "experimental_strategy",
+              "LIMS_aliquot_id"
+            ]
+          },
+          "required": [
+            "platform_tool",
+            "library_name",
+            "library_type",
+            "run_id",
+            "run_name",
+            "run_alias",
+            "is_paired_end",
+            "fragment_size",
+            "sequencing_date",
+            "experimental_strategy",
+            "LIMS_aliquot_id"
+          ],
+          "type": "object",
+          "properties": {          
+            "platform_tool": {
+              "enum": [
+                "CAPILLARY",
+                "LS454",
+                "ILLUMINA",
+                "SOLID",
+                "HELICOS",
+                "IONTORRENT",
+                "ONT",
+                "PACBIO",
+                "Nanopore",
+                "BGI"
+              ],
+              "type":"string"
+            },
+            "library_name": {
+                "type": "string"
+            },
+            "library_type": {
+              "enum": [
+                "Roche MedExome V3",
+                "SureSelect V5"
+              ],
+              "type": "string"
+            },
+            "run_id": {
+                "type": "string"
+            },
+            "is_paired_end": {
+                "type": "boolean"
+            },
+            "fragment_size": {
+              "type": "integer"
+            },
+            "sequencing_date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "oneOf": [
+                    {
+                      "format": "date"
+                    },
+                    {
+                      "format": "date-time"
+                    }
+                  ],
+                  "example": [
+                    "2019-06-16",
+                    "2019-06-16T20:20:39+00:00"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "experimental_strategy": {
+              "enum": [
+                "WGS",
+                "WXS",
+                "RNA-Seq",
+                "ChIP-Seq",
+                "miRNA-Seq",
+                "Bisulfite-Seq",
+                "Validation",
+                "Amplicon",
+                "ATAC-Seq",
+                "scRNA-Seq",
+                "Targeted Sequencing",
+                "Other"
+              ],
+              "type":"string"
+            },
+            "LIMS_aliquot_id":{
+              "type":"string"
+            }
+          }
+        }
+      }
+    }
+  }
